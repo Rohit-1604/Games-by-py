@@ -1,0 +1,41 @@
+""""
+ You have To Select a number ,From Given  choice (0,1,2)
+ and check your luck you gussed right or wrong""""
+ 
+ #suffling of correct Answer Will Change all the time when you run the program
+# From Suffling we have use random library 
+mylist=['','','O']
+from random import shuffle
+
+def shuffle_list(my_list):
+    shuffle(mylist)
+
+    return my_list
+
+def player_guess():
+    guess=' '
+
+    while guess not in ['0','1','2']:
+        #call input Function Again
+        guess= input("Enter Your Choice:0,1 or 2  \n")
+    return int(guess)
+
+def check_guess(mylist,guess):
+    if mylist[guess] == 'O':
+        print('Correct Answer You Won Ticket of Las Vegas')
+    else:
+        print("Wrong......better Luck Next Time Dude!!!!!!!!!!")
+        print(mylist)
+
+
+#initial list
+mylist=['','O','']
+#shuffle list
+mixedup_list= shuffle_list(mylist)
+
+#get User's guess()
+
+guess= player_guess()
+
+check_guess(mixedup_list,guess)
+
