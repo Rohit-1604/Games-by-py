@@ -5,7 +5,7 @@
  #suffling of correct Answer Will Change all the time when you run the program
 # From Suffling we have use random library 
 mylist=['','','O']
-from random import shuffle
+for random import shuffle
 
 def shuffle_list(my_list):
     shuffle(mylist)
